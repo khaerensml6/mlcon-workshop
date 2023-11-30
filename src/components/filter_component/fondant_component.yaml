@@ -1,0 +1,31 @@
+name: Filter prompts
+description: Component that generates a set of seed prompts
+image: "alpine:latest"
+
+consumes:
+  images:
+    fields:
+      url:
+        type: string
+
+  captions:
+    fields:
+      text:
+        type: string
+
+produces:
+  images:
+    fields:
+      url:
+        type: string
+
+  captions:
+    fields:
+      text:
+        type: string
+
+args:
+  max_length:
+    description: Optional argument that defines the number of rows to load. Useful for testing pipeline runs on a small scale
+    type: int
+    default: None

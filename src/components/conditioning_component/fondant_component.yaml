@@ -1,0 +1,21 @@
+name: Condition images
+description: Component that generates conditioning images
+image: "alpine"
+
+consumes:
+  images:
+    fields:
+      data:
+        type: binary
+
+produces:
+  conditionings:
+    fields:
+      data:
+        type: binary
+
+# args:
+#   arg_name:
+#     description: a description
+#     type: arg_type
+#     default: None
